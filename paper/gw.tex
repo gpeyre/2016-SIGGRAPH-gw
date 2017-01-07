@@ -1,0 +1,112 @@
+\documentclass{acmsiggraph}
+
+\usepackage{mystyle}
+
+\usepackage{MyMnSymbol} % fixes underbrace command
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{pbox}
+
+\TOGonlineid{0000}
+\TOGvolume{0}
+\TOGnumber{0}
+\TOGarticleDOI{1111111.2222222}
+% \TOGprojectURL{}
+% \TOGvideoURL{}
+% \TOGdataURL{}
+% \TOGcodeURL{}
+
+%
+
+\title{Entropic Metric Alignment for Correspondence Problems}
+
+\author{Justin Solomon\thanks{E-mail: \href{mailto:jsolomon@mit.edu}{jsolomon@mit.edu}}\\ MIT
+\and
+Gabriel Peyr\'e \\ CNRS \& Univ. Paris-Dauphine
+\and
+Vladimir G.\ Kim \\ Adobe Research
+\and
+Suvrit Sra \\ MIT
+}
+\pdfauthor{Solomon, Peyr\'e, Kim, and Sra}
+\keywords{Gromov-Wasserstein, matching, entropy}
+
+\TOGonlineid{0237}
+\setcopyright{rightsretained}
+\copyrightyear{2016}
+
+\copyrightyear{2016}
+\setcopyright{acmlicensed}
+\conferenceinfo{SIGGRAPH '16 Technical Paper}{July 24 - 28, 2016, Anaheim, CA}
+\isbn{978-1-4503-4279-7/16/07}%\acmPrice{\$15.00}
+\doi{http://dx.doi.org/10.1145/2897824.2925903}
+
+%\conferenceinfo{SIGGRAPH 2016 Papers}{July 24-28, 2016, Anaheim, CA} 
+%\isbn{978-1-4503-ABCD-E/16/07} 
+%\doi{http://doi.acm.org/10.1145/9999997.9999999}
+
+\begin{document}
+
+\teaser{
+%\begin{tabular}{c@{\raisebox{.5in}{\huge $\boldsymbol\longmapsto$}}c@{}c@{}c@{}c}
+%\includegraphics[height=1in]{figures/icon/icon_source.pdf}&
+%\includegraphics[height=1in]{figures/surface_maps/target_skirt.pdf}&
+%\includegraphics[height=1in]{figures/surface_maps/target_skirt2.pdf}&
+%\includegraphics[height=1in]{figures/cloud/cloud2.pdf}&
+%\includegraphics[height=1in]{figures/icon/icon_target.pdf}
+%\end{tabular}
+%\caption{\justin{Write me.}}
+}
+
+
+\maketitle
+
+\input{sections/sec-abstract}
+
+%\begin{CRcatlist}
+%  \CRcat{I.3.5}{Computer Graphics}{Computational Geometry \& Object Modeling}{Geometric algorithms}
+%\end{CRcatlist}
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10010147.10010371.10010396.10010402</concept_id>
+<concept_desc>Computing methodologies~Shape analysis</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Computing methodologies~Shape analysis}
+
+\keywordlist
+
+\conceptlist
+
+\printcopyright
+
+\input{sections/sec-introduction}
+\input{sections/sec-related-work}
+\input{sections/sec-matching}
+\input{sections/sec-experiments}
+\input{sections/sec-extensions}
+\input{sections/sec-conclusion}
+
+\section*{Acknowledgments}
+
+% Acknowledgments
+% Tom Funkhouser, Will Leeb
+% Face scan from Singularity University.
+
+T.\ Funkhouser and W.\ Leeb kindly edited early drafts of this paper.  J.\ Solomon and S.\ Sra were connected on the MathOverflow platform.  C.\ Lampert suggested the connection to~\cite{quadrianto-2009}.
+
+J.\ Solomon acknowledges the support of the NSF Mathematical Sciences Postdoctoral Research Fellowship (award number 1502435).  The work of G.\ Peyr\'e has been supported by the European Research Council (ERC project SIGMA-Vision).  3D face point cloud courtesy Singularity University.
+
+\appendix
+\input{sections/sec-appendix}
+
+\bibliographystyle{acmsiggraph}
+\nocite{*}
+\bibliography{gw}
+
+\end{document}

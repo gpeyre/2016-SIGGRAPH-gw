@@ -1,0 +1,69 @@
+% !TEX root = ../gw.tex
+
+\section{Related Work}\label{sec:related_work}
+
+Our algorithm is a general technique for mapping, a problem that has a long history in graphics. In this section, we focus on works relevant to our discussion; see~\cite{kaick-2011} for a thorough survey of correspondence algorithms.
+
+%TODO:  Conformal wasserstein distances
+
+\paragraph*{Gromov-Wasserstein (GW) distances.}  
+
+We focus on the GW mapping objective~\cite{memoli-2007}, a relaxation of the Gromov-Hausdorff (GH) distance between metric spaces~\cite{gromov-2001}. GH measures the single distance most distorted by a map.  While it has been applied to geometry processing~\cite{bronstein-2010}, GH is costly to optimize and prioritizes one distance value at a time.%; \cite{bronstein-2010} apply it to geometry processing.
+
+%\gabriel{Tentative of new paragraph}
+
+GW is a distance between \emph{metric measure spaces}, i.e., metric spaces equipped with a probability distribution (see~\cite{memoli-2011,memoli-2014,SturmGW} for more details). This additional feature is crucial, especially because it allows one to measure the \emph{expected} distortion of distances. Matchings considered by GW distances thus differ from the point-to-point maps considered by Gromov-Hausdorff distances. GW distances optimize over probabilistic ``measure couplings'' (see \S\ref{sec:matching}), the continuous counterpart of ``fuzzy'' mapping matrices introduced in~\cite{kim-2012,solomon-2012}.
+% 
+Using an additional probability distribution on a metric space is also beneficial from an application point of view, because one can encode additional information (such as spatially varying confidence or noise level) in the probability distribution; see \S\ref{sec:weighted_mtx} for an example.
+
+%\gabriel{this is the old paragraph}
+
+%GW distances measure the \emph{expected} distortion of distances.
+%See~\cite{memoli-2011,memoli-2014} for discussion, and~\cite{SturmGW} for theoretical developments. % on GW distances.
+
+%The representation of a map for GW distances also differs from the point-to-point map considered in constructing Gromov-Hausdorff distance.  GW distances optimize over probabilistic ``measure couplings'' (see \S\ref{sec:matching}), the continuous counterpart of ``fuzzy'' mapping matrices introduced in~\cite{kim-2012,solomon-2012}.
+
+
+\paragraph*{Mapping objectives.} Most mathematical methods for correspondence are built around criteria for a desirable map, expressed in algorithmic design choices or as terms in an objective function.  Here, we attempt to place GW distances in this larger context.
+
+%\suv{Aren't the kernelized methods below limited to matching symmetric matrices, which on top must also be positive definite? Thus, the ``convexity'' versus ``non-convexity'' concern also applies here?}
+
+Many mapping methods attempt to minimize \emph{local} distortion, measuring the stretch of the source onto the target.  In differential geometry, harmonic maps minimize a local measure of stretch and shear~\cite{urakawa-2013}.  Heat kernel-based methods like~\cite{ovsjanikov-2010} prefer maps that distort local distances and curvatures; Kezurer et al.~\shortcite{kezurer-2015} use a similar objective.  ``Kernelized sorting''~\cite{quadrianto-2009} optimizes the Hilbert Schmidt Independence Criterion~\cite{smola-2007}, which coincides with the GW objective function after replacing geodesic distances with diffusion kernels. Fried et al.~\shortcite{fried-2015} apply this machinery to image layout problems.  These methods are subject to the challenge of assembling many local constraints into one map.
+
+%GW distances belong to a different class of methods, which seek maps that preserve global geometric structure.  
+Other mapping methods seek to preserve global structure.  Bronstein et al.~\shortcite{bronstein-2006} showed that one such objective is effective for nonrigid mesh registration, optimized using simple gradient-based steps; Aflalo and Kimmel~\shortcite{aflalo-2013} introduce a spectral approximation in the presence of a Laplacian operator for machine learning applications.  These methods can make it difficult to localize points in small neighborhoods but are well-suited to fuzzy mapping applications.  Our regularized GW mapping technique belongs to this class but is accompanied by a more stable optimization routine than its peers.
+
+If more is known about the mapped geometry, specialized algorithms may apply.  For instance, Kim et al.~\shortcite{kim-2011} seek nearly conformal maps between surfaces and Wei et al.~\shortcite{wei-2015} train for maps between human body models.  Chen and Koltun~\shortcite{chen-2015} rely on extrinsic alignment to reduce matching ambiguity for triangulated surfaces.  We aim to devise a versatile method that does not depend on these assumptions, making it applicable to many domains (see \S\ref{sec:experiments}).
+
+Our measure couplings bear some rough similarity to the functional map matrices of Ovsjanikov et al.~\shortcite{ovsjanikov-2012}, but the underlying variables are different.  We minimize geometric distortion, while they use weaker ``commutativity'' regularizers and descriptors.  Functional map matrices in the Laplace-Beltrami basis also can take on negative values, which are explicitly avoided in our probabilistic formulation.
+
+\paragraph*{Optimal transportation.}  As we will see in \S\ref{sec:matching}, the GW matching objective function inherits part of its name from the Wasserstein distance between probability distributions on a geometric domain.  These latter distances have recently been applied to several problems in graphics; a small sampling includes~\cite{bonneel-2011,degoes-2011,merigot-2011,deGoes-2012,schwartzburg-2014,solomon-2014,deGoes-2015,solomon-2015}. Despite this relationship, the Wasserstein and GW distances serve contrasting purposes and require different computational machinery.
+
+%\gabriel{I am not a big fan of underline, I would prefer italic.}\justin{This is a strategic underline :-) --- you'll see I used italics everywhere else.  I'm really worried lazy SIGGRAPH reviewers will quickly write this off as an easy extension of last year's paper.  So, I used unexpected typography to make them read this sentence twice :-)}
+
+%\suv{I guess the first sentence below is also 'strategic' because it otherwise essentially repeats the message of the last sentence of the previous paragraph. Also, what if you use \textbf instead of underline? maybe that is too annoying.}
+GW and Wasserstein distances apply to different problems.  Wasserstein distances are between distributions on the \underline{same} geometric domain.  GW distances are between \underline{different} geometric domains.  From an optimization standpoint, Wasserstein distances are defined by a convex linear program~\cite{villani-2003,rubner-2000}, while GW distances require solving a nonconvex quadratic program. % This makes it impossible to apply Wasserstein algorithms directly to the GW case.
+
+%\gabriel{I would insist on the fact that it is in large the entropy that leads to fuzzy coupling. }\justin{Added a sentence to the next paragraph}
+
+Nonetheless, we leverage algorithms for Wasserstein distances as building blocks.  We apply entropic regularization, proposed for optimal transportation in~\cite{cuturi-2013,benamou-2015} and introduced to graphics in~\cite{solomon-2015}; the entropic Sinkhorn algorithm comprises our inner loop.  Our algorithm resembles ``softassign'' in machine learning~\cite{rangarajan-1997} (see \S\ref{sec:convergence}).  The entropic term controls the fuzziness of our coupling; highly-regularized problems can generate meaningful rough maps in just a few iterations, while decreasing the regularizer better approximates the GW problem at the cost of more expensive optimization.
+
+%\suv{Do we need any comparison with Memoli's approach?}%oddly, Memoli doesn't provide many details about his approach, algorithmically at least.  The BFGS comparison is my best guess --- he mentions approximate Hessians...
+
+\paragraph*{Quadratic assignment and correspondence.}  GW computation is an instance of the quadratic assignment problem~\cite{pardalos-1994,loiola-2007,cela-2013}.  Solving this problem with global optimality and point-to-point constraints likely is algorithmically intractable---even within a constant approximation factor~\cite{sahni-1976}.  After relaxing integer constraints the problem remains similarly intractable~\cite{sahni-1974}.
+
+%\suv{Any word on how our approach fits in given the difficulty of quadratic assignment. I would place this para before the optimization para to end the related work on a more positive note, also because that refers to the stuff we actually use.}% no idea theoretically --- i would imagine the most general case of GW with arbitrary D matrices is equivalent to general quadratic assignment
+
+\paragraph*{Optimization.}  Limited attention has been dedicated to the problem of computing GW distances efficiently.  Initial work used general-purpose solvers.  M\'emoli~\shortcite{memoli-2009} introduces a spectral approximation bounded by solving a sequence of linear programs.  
+
+An alternative approach with theoretical guarantees is convex relaxation, removing constraints from nonconvex problems until they become convex programs.  %\suv{What is tightness theory?} 
+Some theoretical results provide conditions under which these methods recover a global optimum for the original problem, that is, when the relaxations are \emph{tight}.  While the potential for global optimality is attractive, the number of relaxed variables can be huge.  For instance, Kezurer et al.~\shortcite{kezurer-2015} optimize over $n^2\times n^2$ semidefinite matrices, where $n$ is the number of mapped points, and~\cite{solomon-2012,solomon-2013} include many large-scale transportation subproblems.  Furthermore, relaxed problems with non-unique solutions, e.g.\ mapping in the presence of symmetries, admit large spaces of unusable outputs.  See~\cite{aflalo-2014,aflalo-2015,lyzinski-2015} for similar trade-offs in graph matching.  Eigenvalue relaxations, e.g.~\cite{leordeanu-2005}, also provide some notion of global optimality, with much less favorable conditions for tightness and after removing many constraints.
+
+Our algorithm instead inherits convergence and \emph{local} optimality from recent work on nonconvex optimization~\cite{bot-2015}.  It resembles a discretized gradient flow in the Kullback-Leibler (KL) metric, similar to the forward--backward proximal gradient algorithm~\cite{bauschke-2011,combettes-2011} extended to Bregman divergences~\cite{bauschke-2006}.  Guarantees for nonconvex objectives come from the Kurdyka-{\L}ojasiewicz (also KL) property~\cite{kurdyka-1998,lojasiewicz-1963,lojasiewicz-1993}, applied to nonconvex optimization by Attouch et al.~\shortcite{attouch-2010}.
+
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../gw"
+%%% End:

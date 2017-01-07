@@ -1,0 +1,380 @@
+\begin{thebibliography}{\protect\citename{Schwartzburg et~al\mbox{.} }2014}
+
+\bibitem[\protect\citename{Aflalo and Kimmel }2013]{aflalo-2013}
+{\sc Aflalo, Y., and Kimmel, R.}
+\newblock 2013.
+\newblock Spectral multidimensional scaling.
+\newblock {\em PNAS 110}, 45, 18052--18057.
+
+\bibitem[\protect\citename{Aflalo et~al\mbox{.} }2014]{aflalo-2014}
+{\sc Aflalo, Y., Bronstein, A.~M., and Kimmel, R.}
+\newblock 2014.
+\newblock Graph matching: relax or not?
+\newblock {\em CoRR abs/1401.7623\/}.
+
+\bibitem[\protect\citename{Aflalo et~al\mbox{.} }2015]{aflalo-2015}
+{\sc Aflalo, Y., Bronstein, A., and Kimmel, R.}
+\newblock 2015.
+\newblock On convex relaxation of graph isomorphism.
+\newblock {\em Proc. National Academy of Sciences 112}, 10, 2942--2947.
+
+\bibitem[\protect\citename{Attouch et~al\mbox{.} }2010]{attouch-2010}
+{\sc Attouch, H., Bolte, J., Redont, P., and Soubeyran, A.}
+\newblock 2010.
+\newblock Proximal alternating minimization and projection methods for
+  nonconvex problems: An approach based on the {K}urdyka-{{\L}}ojasiewicz
+  inequality.
+\newblock {\em Math. Oper. Res. 35}, 2 (May), 438--457.
+
+\bibitem[\protect\citename{Bauschke and Combettes }2011]{bauschke-2011}
+{\sc Bauschke, H., and Combettes, P.}
+\newblock 2011.
+\newblock {\em Convex Analysis and Monotone Operator Theory in Hilbert Spaces}.
+\newblock CMS.
+
+\bibitem[\protect\citename{Bauschke et~al\mbox{.} }2006]{bauschke-2006}
+{\sc Bauschke, H.~H., Combettes, P.~L., and Noll, D.}
+\newblock 2006.
+\newblock Joint minimization with alternating {B}regman proximity operators.
+\newblock {\em Pacific J. Optimization 2}, 3, 401--424.
+
+\bibitem[\protect\citename{Benamou et~al\mbox{.} }2015]{benamou-2015}
+{\sc Benamou, J.-D., Carlier, G., Cuturi, M., Nenna, L., and Peyr\'e, G.}
+\newblock 2015.
+\newblock Iterative {B}regman projections for regularized transportation
+  problems.
+\newblock {\em SIAM J. Scientific Computing 37}, 2, A1111--A1138.
+
+\bibitem[\protect\citename{Bonneel et~al\mbox{.} }2011]{bonneel-2011}
+{\sc Bonneel, N., van~de Panne, M., Paris, S., and Heidrich, W.}
+\newblock 2011.
+\newblock Displacement interpolation using {L}agrangian mass transport.
+\newblock {\em ACM Trans. Graph. 30}, 6 (Dec.), 158:1--158:12.
+
+\bibitem[\protect\citename{Bo{\c t} et~al\mbox{.} }2015]{bot-2015}
+{\sc Bo{\c t}, R.~I., Csetnek, E.~R., and L\'aszl\'o, S.~C.}
+\newblock 2015.
+\newblock An inertial forward--backward algorithm for the minimization of the
+  sum of two nonconvex functions.
+\newblock {\em {EURO} J. Computational Optimization\/}, 1--23.
+
+\bibitem[\protect\citename{Bregman }1967]{bregman-1967}
+{\sc Bregman, L.~M.}
+\newblock 1967.
+\newblock The relaxation method of finding the common point of convex sets and
+  its application to the solution of problems in convex programming.
+\newblock {\em {USSR} comp. math. and math. phys. 7}, 3, 200--217.
+
+\bibitem[\protect\citename{Bronstein et~al\mbox{.} }2006]{bronstein-2006}
+{\sc Bronstein, A.~M., Bronstein, M.~M., and Kimmel, R.}
+\newblock 2006.
+\newblock Generalized multidimensional scaling: a framework for
+  isometry-invariant partial surface matching.
+\newblock {\em PNAS 103}, 5, 1168--1172.
+
+\bibitem[\protect\citename{Bronstein et~al\mbox{.} }2010]{bronstein-2010}
+{\sc Bronstein, A.~M., Bronstein, M.~M., Kimmel, R., Mahmoudi, M., and Sapiro,
+  G.}
+\newblock 2010.
+\newblock A {G}romov-{H}ausdorff framework with diffusion geometry for
+  topologically-robust non-rigid shape matching.
+\newblock {\em IJCV 89}, 2-3, 266--286.
+
+\bibitem[\protect\citename{\c{C}ela }2013]{cela-2013}
+{\sc \c{C}ela, E.}
+\newblock 2013.
+\newblock {\em The Quadratic Assignment Problem: Theory and Algorithms}.
+\newblock Combinatorial Optimization. Springer.
+
+\bibitem[\protect\citename{Chen and Koltun }2015]{chen-2015}
+{\sc Chen, Q., and Koltun, V.}
+\newblock 2015.
+\newblock Robust nonrigid registration by convex optimization.
+\newblock In {\em Proc. ICCV}, 2039--2047.
+
+\bibitem[\protect\citename{Combettes and Pesquet }2011]{combettes-2011}
+{\sc Combettes, P.~L., and Pesquet, J.-C.}
+\newblock 2011.
+\newblock Proximal splitting methods in signal processing.
+\newblock In {\em Fixed-point algorithms for inverse problems in science and
+  engineering}. 185--212.
+
+\bibitem[\protect\citename{Coste }1999]{coste1999omin}
+{\sc Coste, M.}
+\newblock 1999.
+\newblock An introduction to {O}-minimal geometry.
+\newblock Tech. rep., Institut de Recherche Mathematiques de Rennes, November.
+
+\bibitem[\protect\citename{Cuturi }2013]{cuturi-2013}
+{\sc Cuturi, M.}
+\newblock 2013.
+\newblock Sinkhorn distances: Lightspeed computation of optimal transportation.
+\newblock In {\em Proc. NIPS}, vol.~26. 2292--2300.
+
+\bibitem[\protect\citename{De~Goes et~al\mbox{.} }2011]{degoes-2011}
+{\sc De~Goes, F., Cohen-Steiner, D., Alliez, P., and Desbrun, M.}
+\newblock 2011.
+\newblock An optimal transport approach to robust reconstruction and
+  simplification of 2d shapes.
+\newblock In {\em Computer Graphics Forum}, vol.~30, 1593--1602.
+
+\bibitem[\protect\citename{de~Goes et~al\mbox{.} }2012]{deGoes-2012}
+{\sc de~Goes, F., Breeden, K., Ostromoukhov, V., and Desbrun, M.}
+\newblock 2012.
+\newblock Blue noise through optimal transport.
+\newblock {\em ACM Trans. Graph. 31}, 6 (Nov.), 171:1--171:11.
+
+\bibitem[\protect\citename{de~Goes et~al\mbox{.} }2015]{deGoes-2015}
+{\sc de~Goes, F., Wallez, C., Huang, J., Pavlov, D., and Desbrun, M.}
+\newblock 2015.
+\newblock Power particles: An incompressible fluid solver based on power
+  diagrams.
+\newblock {\em ACM Trans. Graph. 34}, 4 (July), 50:1--50:11.
+
+\bibitem[\protect\citename{Fried et~al\mbox{.} }2015]{fried-2015}
+{\sc Fried, O., DiVerdi, S., Halber, M., Sizikova, E., and Finkelstein, A.}
+\newblock 2015.
+\newblock Iso{M}atch: Creating informative grid layouts.
+\newblock In {\em Computer Graphics Forum}, vol.~34, 155--166.
+
+\bibitem[\protect\citename{Gold and Rangarajan }1996]{gold-1996}
+{\sc Gold, S., and Rangarajan, A.}
+\newblock 1996.
+\newblock A graduated assignment algorithm for graph matching.
+\newblock {\em PAMI 18}, 4 (Apr.), 377--388.
+
+\bibitem[\protect\citename{Gromov }2001]{gromov-2001}
+{\sc Gromov, M.}
+\newblock 2001.
+\newblock {\em Metric Structures for Riemannian and Non-Riemannian Spaces}.
+\newblock Progress in Mathematics. Birkh{\"a}user.
+
+\bibitem[\protect\citename{Kezurer et~al\mbox{.} }2015]{kezurer-2015}
+{\sc Kezurer, I., Kovalsky, S.~Z., Basri, R., and Lipman, Y.}
+\newblock 2015.
+\newblock Tight relaxation of quadratic matching.
+\newblock {\em CGF\/}.
+
+\bibitem[\protect\citename{Kim et~al\mbox{.} }2011]{kim-2011}
+{\sc Kim, V.~G., Lipman, Y., and Funkhouser, T.}
+\newblock 2011.
+\newblock Blended intrinsic maps.
+\newblock {\em ACM Trans. Graph. 30}, 4 (July), 79:1--79:12.
+
+\bibitem[\protect\citename{Kim et~al\mbox{.} }2012]{kim-2012}
+{\sc Kim, V.~G., Li, W., Mitra, N.~J., DiVerdi, S., and Funkhouser, T.}
+\newblock 2012.
+\newblock Exploring collections of 3d models using fuzzy correspondences.
+\newblock {\em ACM Trans. Graph. 31}, 4 (July), 54:1--54:11.
+
+\bibitem[\protect\citename{Kurdyka }1998]{kurdyka-1998}
+{\sc Kurdyka, K.}
+\newblock 1998.
+\newblock On gradients of functions definable in o-minimal structures.
+\newblock {\em Annales de l'institut Fourier 48}, 3, 769--783.
+
+\bibitem[\protect\citename{Loiola et~al\mbox{.} }2007]{loiola-2007}
+{\sc Loiola, E.~M., de~Abreu, N. M.~M., Boaventura-Netto, P.~O., Hahn, P., and
+  Querido, T.}
+\newblock 2007.
+\newblock A survey for the quadratic assignment problem.
+\newblock {\em European J. Operational Research 176}, 2, 657--690.
+
+\bibitem[\protect\citename{{\L}ojasiewicz }1963]{lojasiewicz-1963}
+{\sc {\L}ojasiewicz, S.}
+\newblock 1963.
+\newblock Une propri{\'e}t{\'e} topologique des sous-ensembles analytiques
+  r{\'e}els.
+\newblock {\em Les {\'e}quations aux d{\'e}riv{\'e}es partielles\/}, 87--89.
+
+\bibitem[\protect\citename{{\L}ojasiewicz }1993]{lojasiewicz-1993}
+{\sc {\L}ojasiewicz, S.}
+\newblock 1993.
+\newblock Sur la g{\'e}om{\'e}trie semi-et sous-analytique.
+\newblock In {\em Annales de l'institut Fourier}, vol.~43, 1575--1595.
+
+\bibitem[\protect\citename{Lyzinski et~al\mbox{.} }2015]{lyzinski-2015}
+{\sc Lyzinski, V., Fishkind, D., Fiori, M., Vogelstein, J., Priebe, C., and
+  Sapiro, G.}
+\newblock 2015.
+\newblock Graph matching: Relax at your own risk.
+\newblock {\em PAMI\/}.
+
+\bibitem[\protect\citename{M\'emoli }2007]{memoli-2007}
+{\sc M\'emoli, F.}
+\newblock 2007.
+\newblock On the use of {G}romov--{H}ausdorff distances for shape comparison.
+\newblock In {\em Symposium on Point Based Graphics}. 81--90.
+
+\bibitem[\protect\citename{M\'emoli }2009]{memoli-2009}
+{\sc M\'emoli, F.}
+\newblock 2009.
+\newblock Spectral {G}romov-{W}asserstein distances for shape matching.
+\newblock In {\em Proc. ICCV Workshops}, 256--263.
+
+\bibitem[\protect\citename{M\'emoli }2011]{memoli-2011}
+{\sc M\'emoli, F.}
+\newblock 2011.
+\newblock Gromov--{W}asserstein distances and the metric approach to object
+  matching.
+\newblock {\em Foundations of Computational Mathematics 11}, 4, 417--487.
+
+\bibitem[\protect\citename{M\'emoli }2014]{memoli-2014}
+{\sc M\'emoli, F.}
+\newblock 2014.
+\newblock The {G}romov--{W}asserstein distance: A brief overview.
+\newblock {\em Axioms 3}, 3.
+
+\bibitem[\protect\citename{M{\'e}rigot }2011]{merigot-2011}
+{\sc M{\'e}rigot, Q.}
+\newblock 2011.
+\newblock A multiscale approach to optimal transport.
+\newblock In {\em Computer Graphics Forum}, vol.~30, 1583--1592.
+
+\bibitem[\protect\citename{Ovsjanikov et~al\mbox{.} }2010]{ovsjanikov-2010}
+{\sc Ovsjanikov, M., M{\'e}rigot, Q., M{\'e}moli, F., and Guibas, L.}
+\newblock 2010.
+\newblock One point isometric matching with the heat kernel.
+\newblock In {\em Computer Graphics Forum}, vol.~29, 1555--1564.
+
+\bibitem[\protect\citename{Pardalos and Wolkowicz }1994]{pardalos-1994}
+{\sc Pardalos, P., and Wolkowicz, H.}, Eds.
+\newblock 1994.
+\newblock {\em Quadratic Assignment and Related Problems}.
+\newblock AMS.
+
+\bibitem[\protect\citename{Quadrianto et~al\mbox{.} }2009]{quadrianto-2009}
+{\sc Quadrianto, N., Song, L., and Smola, A.~J.}
+\newblock 2009.
+\newblock Kernelized sorting.
+\newblock In {\em Proc. NIPS}, vol.~21. 1289--1296.
+
+\bibitem[\protect\citename{Rangarajan et~al\mbox{.} }1996]{rangarajan-1996}
+{\sc Rangarajan, A., Gold, S., and Mjolsness, E.}
+\newblock 1996.
+\newblock A novel optimizing network architecture with applications.
+\newblock {\em Neural Computation 8}, 5, 1041--1060.
+
+\bibitem[\protect\citename{Rangarajan et~al\mbox{.} }1997]{rangarajan-1997}
+{\sc Rangarajan, A., Yuille, A.~L., Gold, S., and Mjolsness, E.}
+\newblock 1997.
+\newblock A convergence proof for the softassign quadratic assignment
+  algorithm.
+\newblock {\em Proc. NIPS\/}, 620--626.
+
+\bibitem[\protect\citename{Rangarajan et~al\mbox{.} }1999]{rangarajan-1999}
+{\sc Rangarajan, A., Yuille, A., and Mjolsness, E.}
+\newblock 1999.
+\newblock Convergence properties of the softassign quadratic assignment
+  algorithm.
+\newblock {\em Neural Comput. 11}, 6 (Aug.), 1455--1474.
+
+\bibitem[\protect\citename{Rubner et~al\mbox{.} }2000]{rubner-2000}
+{\sc Rubner, Y., Tomasi, C., and Guibas, L.~J.}
+\newblock 2000.
+\newblock The earth mover's distance as a metric for image retrieval.
+\newblock {\em IJCV 40}, 2 (Nov.), 99--121.
+
+\bibitem[\protect\citename{Sahni and Gonzalez }1976]{sahni-1976}
+{\sc Sahni, S., and Gonzalez, T.}
+\newblock 1976.
+\newblock P-complete approximation problems.
+\newblock {\em J. ACM 23}, 3 (July), 555--565.
+
+\bibitem[\protect\citename{Sahni }1974]{sahni-1974}
+{\sc Sahni, S.}
+\newblock 1974.
+\newblock Computationally related problems.
+\newblock {\em SIAM J. Computing 3}, 4, 262--279.
+
+\bibitem[\protect\citename{Schwartzburg et~al\mbox{.} }2014]{schwartzburg-2014}
+{\sc Schwartzburg, Y., Testuz, R., Tagliasacchi, A., and Pauly, M.}
+\newblock 2014.
+\newblock High-contrast computational caustic design.
+\newblock {\em ACM Trans. Graph. 33}, 4 (July), 74:1--74:11.
+
+\bibitem[\protect\citename{Smola et~al\mbox{.} }2007]{smola-2007}
+{\sc Smola, A., Gretton, A., Song, L., and Sch\"olkopf, B.}
+\newblock 2007.
+\newblock A {H}ilbert space embedding for distributions.
+\newblock In {\em Algorithmic Learning Theory}, vol.~4754 of {\em LNCS}.
+  13--31.
+
+\bibitem[\protect\citename{Solomon et~al\mbox{.} }2012]{solomon-2012}
+{\sc Solomon, J., Nguyen, A., Butscher, A., Ben-Chen, M., and Guibas, L.}
+\newblock 2012.
+\newblock Soft maps between surfaces.
+\newblock {\em CGF 31}, 5 (Aug.), 1617--1626.
+
+\bibitem[\protect\citename{Solomon et~al\mbox{.} }2013]{solomon-2013}
+{\sc Solomon, J., Guibas, L., and Butscher, A.}
+\newblock 2013.
+\newblock Dirichlet energy for analysis and synthesis of soft maps.
+\newblock In {\em CGF}, vol.~32, 197--206.
+
+\bibitem[\protect\citename{Solomon et~al\mbox{.} }2014]{solomon-2014}
+{\sc Solomon, J., Rustamov, R., Guibas, L., and Butscher, A.}
+\newblock 2014.
+\newblock Earth mover's distances on discrete surfaces.
+\newblock {\em ACM Trans. Graph. 33}, 4 (July), 67:1--67:12.
+
+\bibitem[\protect\citename{Solomon et~al\mbox{.} }2015]{solomon-2015}
+{\sc Solomon, J., de~Goes, F., Peyr{\'e}, G., Cuturi, M., Butscher, A., Nguyen,
+  A., Du, T., and Guibas, L.}
+\newblock 2015.
+\newblock Convolutional {W}asserstein distances: Efficient optimal
+  transportation on geometric domains.
+\newblock {\em TOG 34}, 4 (July), 66:1--66:11.
+
+\bibitem[\protect\citename{Sturm }2012]{SturmGW}
+{\sc Sturm, K.-T.}
+\newblock 2012.
+\newblock The space of spaces: curvature bounds and gradient flows on the space
+  of metric measure spaces.
+\newblock Preprint 1208.0434, arXiv.
+
+\bibitem[\protect\citename{Sun et~al\mbox{.} }2015]{sun-2015}
+{\sc Sun, J., Qu, Q., and Wright, J.}
+\newblock 2015.
+\newblock When are nonconvex problems not scary?
+\newblock {\em arXiv:1510.06096\/}.
+
+\bibitem[\protect\citename{Thakoor et~al\mbox{.} }2007]{thakoor-2007}
+{\sc Thakoor, N., Gao, J., and Jung, S.}
+\newblock 2007.
+\newblock Hidden {M}arkov model-based weighted likelihood discriminant for
+  2-{D} shape classification.
+\newblock {\em Trans. Image Processing 16}, 11, 2707--2719.
+
+\bibitem[\protect\citename{Urakawa }2013]{urakawa-2013}
+{\sc Urakawa, H.}
+\newblock 2013.
+\newblock {\em Calculus of Variations and Harmonic Maps}.
+\newblock Translations of Mathematical Monographs. AMS.
+
+\bibitem[\protect\citename{van Kaick et~al\mbox{.} }2011]{kaick-2011}
+{\sc van Kaick, O., Zhang, H., Hamarneh, G., and Cohen-Or, D.}
+\newblock 2011.
+\newblock A survey on shape correspondence.
+\newblock {\em CGF 30}, 6, 1681--1707.
+
+\bibitem[\protect\citename{Villani }2003]{villani-2003}
+{\sc Villani, C.}
+\newblock 2003.
+\newblock {\em Topics in Optimal Transportation}.
+\newblock Graduate studies in mathematics. AMS.
+
+\bibitem[\protect\citename{Waltz et~al\mbox{.} }2006]{waltz-2006}
+{\sc Waltz, R.~A., Morales, J.~L., Nocedal, J., and Orban, D.}
+\newblock 2006.
+\newblock An interior algorithm for nonlinear optimization that combines line
+  search and trust region steps.
+\newblock {\em Math. Program. 107}, 3 (July), 391--408.
+
+\bibitem[\protect\citename{Wei et~al\mbox{.} }2015]{wei-2015}
+{\sc Wei, L., Huang, Q., Ceylan, D., Vouga, E., and Li, H.}
+\newblock 2015.
+\newblock Dense human body correspondences using convolutional networks.
+\newblock {\em CoRR abs/1511.05904\/}.
+
+\end{thebibliography}

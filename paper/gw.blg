@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: gw.aux
+The style file: acmsiggraph.bst
+Database file #1: gw.bib
+Warning--empty publisher in bauschke-2011
+Warning--empty organization in chen-2015
+Warning--empty publisher in combettes-2011
+Warning--empty publisher in cuturi-2013
+Warning--can't use both volume and number fields in degoes-2011
+Warning--empty organization in degoes-2011
+Warning--can't use both volume and number fields in fried-2015
+Warning--empty organization in fried-2015
+Warning--can't use both volume and number fields in lojasiewicz-1993
+Warning--empty organization in lojasiewicz-1993
+Warning--empty publisher in memoli-2007
+Warning--empty organization in memoli-2009
+Warning--can't use both volume and number fields in merigot-2011
+Warning--empty organization in merigot-2011
+Warning--can't use both volume and number fields in ovsjanikov-2010
+Warning--empty organization in ovsjanikov-2010
+Warning--empty publisher in quadrianto-2009
+Warning--empty publisher in smola-2007
+Warning--can't use both volume and number fields in solomon-2013
+Warning--empty organization in solomon-2013
+You've used 59 entries,
+            2748 wiz_defined-function locations,
+            916 strings with 13099 characters,
+and the built_in function-call counts, 24715 in all, are:
+= -- 2559
+> -- 1069
+< -- 1
++ -- 368
+- -- 375
+* -- 2176
+:= -- 4061
+add.period$ -- 245
+call.type$ -- 59
+change.case$ -- 403
+chr.to.int$ -- 59
+cite$ -- 79
+duplicate$ -- 801
+empty$ -- 1876
+format.name$ -- 417
+if$ -- 4985
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 62
+newline$ -- 357
+num.names$ -- 178
+pop$ -- 332
+preamble$ -- 1
+purify$ -- 349
+quote$ -- 0
+skip$ -- 526
+stack$ -- 0
+substring$ -- 1599
+swap$ -- 183
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 448
+warning$ -- 20
+while$ -- 232
+width$ -- 63
+write$ -- 830
+(There were 20 warnings)

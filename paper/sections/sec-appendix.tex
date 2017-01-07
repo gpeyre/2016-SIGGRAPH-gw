@@ -1,0 +1,97 @@
+% !TEX root = ../gw.tex
+
+\section{Proof of Proposition~\ref{prop:gw_convergence}}\label{appendix:convergence}
+
+We appeal to~\cite[Theorem 12]{bot-2015}, which establishes convergence of a general nonconvex optimization algorithm.  They consider the iteration (in their notation, fix $\beta_n\equiv0$ and $\alpha_n\equiv\xi$)
+\begin{equation}\label{eq:bot}
+x^{(k\!+\!1)}\!\gets\!\arg\min_u\left\{\!
+D_F(u,x^{(k)})\!+\!\xi\!\left[\!u\cdot \nabla g(x^{(k)})\!+\!f(u)\!\right]
+\!\right\}\!,
+\end{equation}
+where $F$ is a Bregman divergence parameterized by convex $F(x)$:
+$$D_F(x,y)\eqdef F(x)-F(y)-\nabla F(y)\cdot(x-y).$$
+
+Make the following substitutions:
+\begin{align*}
+g(\G)\!\eqdef&-\!\nicefrac{1}{2}\langle \G,\D_0\diag{\bmu_0}\G\diag{\bmu}\D\rangle \\
+&\!\implies\!\nabla g(\G)\!=\!-\!\diag{\bmu_0}\D_0\diag{\bmu_0}\G\diag{\bmu}\D\diag{\bmu}\\
+f(\G)\!\eqdef& -\!\alpha H(\G)+\chi[\G\in\bM]\\
+F(\G)\!\eqdef& -\!H(\G)
+\!\implies\!D_F(\G,\G')\!=\!\KL(\G|\G')
+\end{align*}
+Here, $\chi[\cdot]$ is the $\{0,\infty\}$ indicator of a set.  Then, the algorithm becomes
+$$
+\G^{(k\!+\!1)}
+\!\gets\!
+\arg\min_{\G\in\bM}\left\{\!
+\KL(\G|\G^{(\!k\!)}\!)\!-\!\xi\!\left[\!
+\langle
+\G,\D_0\diag{\bmu_0}\G^{(\!k\!)}\diag{\bmu}\D
+\rangle\!+\!\alpha H(\G)
+\!\right]\!
+\right\}\!.
+$$
+After algebraic simplification, this is exactly the iteration~\eqref{eq:fixed_point_gw} with
+$$\eta\eqdef \frac{\xi\alpha}{1+\xi\alpha}\iff \xi\eqdef\frac{\eta}{\alpha(1-\eta)}.$$
+Notice when $\eta=0$, we must have $\xi=0$ and the $\G^{(k)}$'s do not change.  Contrastingly, $\eta\rightarrow1$ as $\xi\rightarrow\infty.$
+
+The choice of $f$ is proper, lower semicontinuous, and bounded below, and $g$ is differentiable with Lipschitz constant $L_{\nabla g}$:
+\begin{align*}
+\|\nabla g(\G)-\nabla g(\G')\|
+&=\|\diag{\bmu_0}\D_0\diag{\bmu_0}(\G-\G')\diag{\bmu}\D\diag{\bmu}\!\|\\
+&\leq\underbrace{\|\bmu_0\|^2 \|\bmu\|^2\|\D_0\|\|\D\|}_{L_{\nabla g}}\cdot\|\G-\G'\|.
+\end{align*}
+The function $x\mapsto x\ln x$ is $1$--strongly convex.  Hence, $\G\mapsto - H(\G)$ is $\sigma$-strongly convex, where $\sigma\eqdef \min_{ij} \bmu_{0i}\bmu_j$.  Finally, $f+g$ is coercive since it is non-infinite on a compact set, and it satisfies the requirements of the Kurdyka-{\L}ojasiewicz inequality because it is definable in an o-minimal structure over the reals (see~\cite{coste1999omin}).
+% \justin{I'll let Gabriel finish this sentence :-) }\citeme.
+
+Next, we check the requirements of~\cite[Lemma 5]{bot-2015} for convergence; we refer the reader to their paper for notation.  Our iteration~\eqref{eq:bot} does not include a linear term and hence we can take $M_2=0.$  To ensure $M_1>0$, we need $\sigma-\xi L_{\nabla g}>0$, or
+$$\xi<\frac{\min_{ij} \bmu_{0i}\bmu_j}{\|\bmu_0\|^2 \|\bmu\|^2\|\D_0\|\|\D\|}.$$
+If we define $c$ as the right-hand side, then we need $\eta<\nicefrac{c\alpha}{1+c\alpha}.$ Regardless, under this condition we satisfy all the requirements for convergence, as desired.
+
+\section{Composition of Couplings}\label{sec:soft_map_composition}
+
+To check that $\G\!_{ij}\diag{\bmu_{j}}\G\!_{jk}$ is a valid composition of $\G\!_{ij}$ and $\G\!_{jk}$,
+we simply verify that this product is a measure coupling in $\bM(\bmu_i,\bmu_k)$:
+\begin{align*}
+(\G\!_{ij}\diag{\bmu_{j}}\G\!_{jk})\bmu_k
+&=\G\!_{ij}\diag{\bmu_j}\1=\G\!_{ij}\bmu_j=\1\\
+(\G\!_{ij}\diag{\bmu_{j}}\G\!_{jk})\!^\top\!\bmu_i
+&=\G\!_{jk}^\top\diag{\bmu_j}\G\!_{ij}^\top\bmu_i
+=\G\!_{jk}^\top\diag{\bmu_j}\1
+=\G\!_{jk}^\top \bmu_j=\1
+\end{align*}
+Intuitively, this composition formula formalizes the notion $$P(x\!\in\!\mathcal D_i\!\mapsto\!z\!\in\!\mathcal D_k) = \int_{y\in\mathcal D_j}\hspace{-.2in}P(x\!\in\!\mathcal D_i\!\mapsto\!y\!\in\!\mathcal D_j)P(y\!\in\!\mathcal D_j\!\mapsto\!z\!\in\!\mathcal D_k).$$
+
+\section{Proof of Proposition~\ref{prop:nnmf_monotonicity}}
+
+We employ a standard result from the theory of majorization-minimization.  Suppose functions $F(\bA)$ and $G(\bA,\bA')$ satisfy
+\begin{align*}
+F(\bA) &=G(\bA,\bA)\ \forall \bA\geq0\\
+F(\bA) &\leq G(\bA,\bA')\ \forall \bA,\bA'\geq0.
+\end{align*}
+Then, the following iteration monotonically decreases $F(\bA^{(\ell)})$:
+$$\bA^{(\ell+1)}\gets\arg\min_{\bA\geq0} G(\bA,\bA^{(\ell)}),$$
+with strict decrease unless $\bA^{(\ell)}$ is a stationary point of $F$.  This follows directly from the definition of $\bA^{(\ell)}$ and structure of $F,G$.
+
+In our case, we take
+\begin{align*}
+F&(\bA)= \KL(\bG|\bA\bA^\top)\\
+&\sim \sum_{ik} \left[
+-\bG_{ik}\ln(\bA\bA^\top)_{ik}+(\bA\bA^\top)_{ik}
+\right]\textrm{ after removing constants}\\
+&=\|\bA^\top\1\|^2-\sum_{ik}\bG_{ik}\ln \sum_m \frac{\lambda^{ik}_m \bA_{im}\bA_{km}}{\lambda^{ik}_m},
+\end{align*}
+where $\lambda$ is any set of constants satisfying $\sum_m\lambda^{ik}_m=1$ and $\lambda^{ik}_m\geq0.$  By Jensen's inequality,
+$$F(\bA)\leq \|\bA^\top\1\|^2-\sum_{ik}\bG_{ik}\sum_m \lambda^{ik}_m\ln\frac{\bA_{im}\bA_{km}}{\lambda^{ik}_m}.$$
+Take
+$$\lambda^{ik}_m= \lambda^{ik}_m(\bG')\eqdef\frac{\bG_{im}\bG_{km}}{\sum_{m'} \bG_{im'}\bG_{km'}}.$$
+With this choice, by the inequalities above the following $G$ satisfies the criteria from majorization-minimization:
+$$G(\bA,\bA')\eqdef \|\bA^\top\1\|^2-\sum_{ik}\bG_{ik}\ln \sum_m \frac{\lambda^{ik}_m \bA_{im}\bA_{km}}{\lambda^{ik}_m}.$$
+This function is strictly convex in $\bA$. The iterations of our algorithm solve the root-finding problem $\nabla_\bA G(\bA,\bA^{(\ell)})=0$ in closed form.  Note that solutions of $\nabla_\bA G(\bA,\bA^{(\ell)})=0$ satisfy $\bA>0$ without adding the constraint explicitly thanks to the log term.
+%\suv{one technical point: by construction the solution happens to be strictly positive, so derivative disappearing suffices; otherwise one has to perhaps mention at least in passing that solving $\nabla G = 0$ yields a feasible nonnegative $A$.}
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../gw"
+%%% End:
